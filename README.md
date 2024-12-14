@@ -77,15 +77,12 @@
 - Bila sudah muncul tulisan Writing at 0x0000e000... (sekian %), maka tombol Boot boleh dilepas
 - Setelah itu Wajib klik tombol reset sekali lagi untuk berpindah dari mode download menjadi mode run
 
-**NOTE:**
-
-**INGAT YA WAJIB Di Klik Tombol RESET setelah proses upload selesai,**
-
-**tanpa itu program yang baru diupload tidak akan dijalankan**
+> [!NOTE]  
+> INGAT YA WAJIB Di Klik Tombol RESET setelah proses upload selesai, tanpa itu program yang baru diupload tidak akan dijalankan
 
 ---
 
-contoh program blinky
+Contoh program blinky
 
 ```cpp
 // the setup function runs once when you press reset or power the board
