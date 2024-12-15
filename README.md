@@ -142,10 +142,8 @@ Langkah yang harus dilakukan
 
    Serial Monitor
 
-   :
-
    - **"OFF"** saat LED menyala.
-   - **"ON"** saat LED mati.
+- **"ON"** saat LED mati.
 
 Program ini merupakan contoh sederhana namun sangat efektif untuk mempelajari komunikasi serial dan mengintegrasikannya dengan kontrol perangkat keras seperti LED. Selamat mencoba! 🚀
 
