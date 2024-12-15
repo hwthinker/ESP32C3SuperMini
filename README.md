@@ -49,7 +49,7 @@
 
 11. Setting port serial , untuk windows bisa cek device manager, pastikan anda telah install driver serial usb anda
 
-![](./assets/12.png)
+![image-20241216061526698](./assets/image-20241216061526698.png)
 
 ## Contoh Program Serial
 
