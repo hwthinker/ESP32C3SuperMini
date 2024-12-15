@@ -2,7 +2,7 @@
 
 # ESP32 C3 Super Mini
 
-![image-20241215153846914](./assets/01.png)
+![](./assets/01.png)
 
 
 ## Install Board
@@ -141,7 +141,7 @@ Board **ESP32-C3 Super Mini** mendukung komunikasi serial melalui koneksi USB ya
 
 Sebelum menjalankan program ini, pastikan untuk mengaktifkan opsi **USB CDC on Boot** melalui pengaturan pada menu **Tools** di Arduino IDE agar komunikasi serial dapat berjalan dengan baik. Pengaturan ini memastikan board dapat menggunakan port USB internal untuk komunikasi serial.
 
-![image-20241215142431599](./assets/13.png)
+![](./assets/13.png)
 
 ### Fitur Program:
 
@@ -207,9 +207,9 @@ Program ini merupakan contoh sederhana namun sangat efektif untuk mempelajari ko
 > [!NOTE]
 >  Framework arduino yang baru sudah terdapat board untu manugaktur  Nologo.tech, pada board anda bisa langsung memilih board Nologo ESP32C3
 
-![image-20241215141957109](./assets/14.png)
+![](./assets/14.png)
 
-![image-20241215153846914](./assets/015.png)
+![](./assets/015.png)
 
 **Referensi**
 
