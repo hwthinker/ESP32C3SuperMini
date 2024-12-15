@@ -51,90 +51,6 @@
 
 ![](./assets/12.png)
 
-## Upload program
-
-**CARA UPLOAD** klik upload program di komputer. akan muncul tulisan
-
-```cpp
-- ---esptool.py v3.0-dev
-- ---Serial port COM…
-- ---Connecting........_____....._____.....__
-```
-
----
-
-- **Tekan dan tahan** tombol Boot bersamaan itu Klik(**tekan dan lepas**) tombol reset
-- **Lepas** tombol reset/EN dan **tetap tekan** tombol 0/Boot . akan muncul info berikut
-
-```cpp
-- ---Compressed 261792 bytes to 122378...
-- ---Writing at 0x00010000... (12 %)
-- ---Writing at 0x00014000... (25 %)
-- ---Writing at 0x00018000... (37 %)
-```
-
----
-
-- Bila sudah muncul tulisan Writing at 0x0000e000... (sekian %), maka tombol Boot boleh dilepas
-- Setelah itu Wajib klik tombol **reset** sekali lagi untuk berpindah dari mode download menjadi mode run
-
-> [!NOTE]  
-> INGAT YA WAJIB Di Klik Tombol RESET setelah proses upload selesai, tanpa itu program yang baru diupload tidak akan dijalankan
-
----
-
-## Contoh program blinky
-
-Board **ESP32-C3 Super Mini** merupakan salah satu pilihan ideal untuk proyek IoT dan mikrokontroler karena ukurannya yang kecil, konsumsi daya rendah, serta dilengkapi dengan berbagai fitur seperti konektivitas Wi-Fi dan Bluetooth LE. Board ini juga dilengkapi dengan sebuah LED internal yang terhubung ke **GPIO 8**, menjadikannya sangat cocok untuk demonstrasi program sederhana seperti *Blinky*.
-
-**Program Blinky** adalah program dasar yang digunakan untuk memulai pemrograman pada mikrokontroler. Dalam program ini, LED akan menyala dan mati secara bergantian dengan durasi tertentu. Pada board ini, LED internal akan:
-
-- Menyala selama 100 milidetik, dan
-- Mati selama 1 detik.
-
-Kode program yang digunakan untuk mengendalikan LED internal ditulis dalam bahasa C++ menggunakan kerangka kerja **Arduino**. Berikut adalah kode lengkapnya:
-
-```cpp
-#include <Arduino.h>
-int led = 8;
-
-void setup() {
-  // initialize digital pin led as an output
-  pinMode(led, OUTPUT);
-}
-
-void loop() {
-  digitalWrite(led, LOW);    // turn the LED on
-  delay(100);               // wait for a second
-  digitalWrite(led, HIGH);   // turn the LED off
-  delay(1000);               // wait for a second
-}
-```
-
-### Penjelasan Program:
-
-1. **Pin GPIO**: Variabel `led` diset ke nilai 8 untuk menunjuk pin GPIO yang terhubung dengan LED internal.
-
-2. **Fungsi `setup()`**: Fungsi ini hanya dijalankan sekali saat board dinyalakan atau di-*reset*. Di sini, pin LED diatur sebagai *output*.
-
-3. Fungsi `loop()`
-
-   : Fungsi ini berjalan berulang-ulang. Dalam program ini, fungsi 
-
-   ```
-   loop()
-   ```
-
-    akan:
-
-   - Menyalakan LED dengan mengatur pin GPIO 8 ke `LOW`.
-   - Menunggu 100 ms.
-   - Mematikan LED dengan mengatur pin GPIO 8 ke `HIGH`.
-   - Menunggu 1 detik sebelum mengulang siklusnya.
-
-Program ini sangat cocok sebagai langkah pertama untuk memastikan board "nologo" ESP32-C3 Super Mini Anda berfungsi dengan baik dan untuk memahami dasar pemrograman mikrokontroler. Selamat mencoba! 🚀
-
----
 ## Contoh Program Serial
 
 Board **ESP32-C3 Super Mini** mendukung komunikasi serial melalui koneksi USB yang memungkinkan pengiriman dan penerimaan data antara mikrokontroler dan komputer. Program berikut memanfaatkan fitur komunikasi serial untuk memberikan informasi status LED (ON/OFF) secara real-time ke *Serial Monitor*.
@@ -187,7 +103,36 @@ void loop() {
    - Mematikan LED (`HIGH`) selama 1 detik.
    - Mengirimkan teks "ON" ke *Serial Monitor*.
 
-### Langkah Pengujian:
+## Upload program
+
+Bila tampilan seperti ini maka anda harus mengkonfigurasi ESP32 anda agar bisa melakukan download
+
+```
+- ---esptool.py v3.0-dev
+- ---Serial port COM…
+- ---Connecting........_____....._____.....__
+```
+
+Langkah yang harus dilakukan
+
+- Tekan dan tahan tombol Boot/0  
+- Klik(tekan dan lepas) tombol reset/EN sambil tetap tekan tombol Boot .
+- Lepas tombol boot
+- Klik tombol upload pada Arduino IDE, bila sukses akan menampilkan info
+
+```cpp
+- ---Compressed 261792 bytes to 122378...
+- ---Writing at 0x00010000... (12 %)
+- ---Writing at 0x00014000... (25 %)
+- ---Writing at 0x00018000... (37 %)
+```
+
+- Setelah selesai Wajib klik tombol **reset** sekali lagi untuk berpindah dari mode download menjadi mode run
+
+> [!NOTE]  
+> INGAT YA WAJIB Di Klik Tombol RESET setelah proses upload selesai, tanpa itu program yang baru diupload tidak akan dijalankan
+
+## Langkah Pengujian:
 
 1. Unggah program ke board **ESP32-C3 Super Mini**.
 
@@ -210,6 +155,27 @@ Program ini merupakan contoh sederhana namun sangat efektif untuk mempelajari ko
 ![](./assets/14.png)
 
 ![](./assets/015.png)
+
+## Pemecahan Masalah
+
+### A. Port Com  tidak dapat dikenali di Arduino
+
+Masuk ke mode unduh: 
+
+- Tekan dan tahan tombol Boot/0  
+- Klik(tekan dan lepas) tombol reset/EN sambil tetap tekan tombol Boot .
+- Lepas tombol boot
+- Setelah selesai Wajib klik tombol **reset** sekali lagi untuk berpindah dari mode download menjadi mode run
+
+### B. Program tidak dapat berjalan setelah diunggah
+
+Setelah upload berhasil, Anda perlu menekan tombol Reset sebelum dapat dijalankan.
+
+### C. Port serial di Arduino tidak dapat mencetak
+
+Anda perlu mengatur USB CDC On Boot di toolbar untuk diaktifkan.
+
+
 
 **Referensi**
 
