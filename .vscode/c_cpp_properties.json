@@ -475,6 +475,10 @@
             "defines": [
                 "PLATFORMIO=60116",
                 "ARDUINO_ESP32C3_DEV",
+                "ARDUINO_USB_CDC_ON_BOOT=1",
+                "USBCON",
+                "CORE_DEBUG_LEVEL=5",
+                "ESP32C3_USB_CDC_ENABLED",
                 "HAVE_CONFIG_H",
                 "MBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\"",
                 "UNITY_INCLUDE_CONFIG_H",
