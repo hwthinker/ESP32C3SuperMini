@@ -1,11 +1,8 @@
-## CDC enable
-- Belum tahu cara menampilkan CDC enable walapun konfigurasi platfromio sudah sepert ini
+## CDC Enable Status
+- [x] Solusi CDC On Boot di PlatformIO: Gunakan `build_flags` (bukan `board_flags`) dengan opsi:
+```ini
+build_flags =
+    -DARDUINO_USB_CDC_ON_BOOT=1
+    -DARDUINO_USB_MODE=1
 ```
-[env:serialtest]
-platform = espressif32
-board = esp32-c3-devkitc-02
-framework = arduino
-monitor_speed = 9600
-board_flags =
-   -DARDUINO_USB_CDC_ON_BOOT=1
-```
+- [x] Seri tutorial lengkap telah ditambahkan ke `README.md`.
