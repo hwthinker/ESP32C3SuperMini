@@ -1,5 +1,22 @@
 # ESP32-C3 Super Mini — Panduan & Seri Tutorial Lengkap
 
+<!-- hwthinker-store-links -->
+
+## Beli boardnya & tutorial lengkap
+
+**Board yang dipakai di repo ini tersedia di HwThinker Store:**
+
+- [ESP32-C3 ESP32C3 RISC-V Super Mini WIFI Bluetooth BLE 5.0 Tiny Board](https://hwthinker.com/produk/36b47204-0b25-4406-b593-0716bcc7c1de)
+
+**Tutorial lengkap — langkah bergambar, troubleshooting, dan kode yang sudah diuji:**
+
+- [ESP32-C3 Super Mini — Panduan & Seri Tutorial Lengkap](https://hwthinker.com/tutorials/esp32-c3-super-mini)
+
+Butuh bantuan pemasangan? Sapa kami lewat live chat di [hwthinker.com](https://hwthinker.com) — barang dikirim dari Surabaya, sudah diuji sebelum dikemas.
+
+<!-- /hwthinker-store-links -->
+
+
 ![](./assets/01.png)
 
 Selamat datang di repository panduan dan seri tutorial **ESP32-C3 Super Mini** (Nologo / SuperMini Board). ESP32-C3 adalah mikrokontroler RISC-V 32-bit berkinerja tinggi yang dilengkapi dengan Wi-Fi 2.4 GHz dan Bluetooth 5 (BLE), dikemas dalam bentuk fisik yang sangat ringkas (*ultra-small footprint*).
