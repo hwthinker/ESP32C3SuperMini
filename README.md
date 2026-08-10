@@ -65,20 +65,6 @@ Dokumen ini berisi dokumentasi setup awal, cara upload, solusi *troubleshooting*
 - **Onboard Buttons**: Tombol **BOOT** (GPIO 9) & Tombol **RESET (EN)**
 - **Tegangan Kerja**: 3.3 V (Input VCC 5V via USB Type-C atau Pin 5V)
 
-### Peta Pinout Header
-```
-           +--------------------+
-     5V -- | [ ]            [ ] | -- GPIO 5 (ADC1_CH5)
-    GND -- | [ ]            [ ] | -- GPIO 4 (ADC1_CH4 / Touch)
-    3V3 -- | [ ]            [ ] | -- GPIO 3 (ADC1_CH3)
-GPIO 10 -- | [ ]  ESP32-C3  [ ] | -- GPIO 2 (ADC1_CH2)
- GPIO 9 -- | [ ] SuperMini  [ ] | -- GPIO 1 (ADC1_CH1)
- GPIO 8 -- | [ ] [LED]      [ ] | -- GPIO 0 (ADC1_CH0)
- GPIO 7 -- | [ ]            [ ] | -- GPIO 20 (RXD)
- GPIO 6 -- | [ ]            [ ] | -- GPIO 21 (TXD)
-           +--------[USB]-------+
-```
-
 ---
 
 ## 🛠️ Modul 1: Persiapan Environment & Instalasi Board
